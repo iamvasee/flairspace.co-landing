@@ -73,14 +73,14 @@ body {
 /* Dark Theme */
 [data-theme="dark"] {
     --bg-color: #1e1e2e;
-    --text-color: #e0e0e0;
-    --accent-color: #2ecc71;
+    --text-color: #ffffff;
+    --accent-color: #9c27b0; /* Purple accent color */
     --prompt-color: #e67e22;
     --border-color: rgba(255, 255, 255, 0.1);
     --shadow-color: rgba(0, 0, 0, 0.3);
     --header-bg: linear-gradient(to right, #2d3436, #1e272e);
     --header-border: rgba(255, 255, 255, 0.05);
-    --content-bg: rgba(30, 30, 46, 0.9);
+    --content-bg: rgba(30, 30, 46, 0.95);
     --footer-bg: #1a1a2e;
     --product-bg: #2d3436;
     --product-hover: #3d4548;
@@ -510,32 +510,80 @@ body {
 
 .product-features ul {
     list-style: none;
-    margin: 10px 0 15px 0;
+    margin: 15px 0 20px 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .product-features li {
-    margin-bottom: 5px;
-    font-size: 0.9em;
+    margin: 0;
+    padding: 10px 15px;
+    font-size: 0.95em;
     color: #555;
-    line-height: 1.5;
+    line-height: 1.6;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 30px;
+}
+
+.product-features li:before {
+    content: '→';
+    color: var(--accent-color);
+    margin-right: 10px;
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+}
+
+[data-theme="dark"] .product-features li {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.product-features li:hover {
+    transform: translateX(5px);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .product-features li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .cta-button {
     display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
-    background: var(--accent-color);
-    color: white;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #7534f6; /* Purple color */
+    color: white !important; /* Ensure text stays white */
     text-decoration: none;
     border-radius: 4px;
-    font-weight: 500;
-    transition: background 0.2s;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
-.cta-button:hover {
-    background: #27ae60;
-    color: white;
+/* Ensure all text in dark mode is white */
+[data-theme="dark"] {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .product-desc,
+[data-theme="dark"] .product-features,
+[data-theme="dark"] .product-features li,
+[data-theme="dark"] .product-features p,
+[data-theme="dark"] .product-features h4 {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .product-link {
+    color: #ffffff !important;
 }
 
 /* Cursor */
