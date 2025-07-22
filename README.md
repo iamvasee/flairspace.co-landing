@@ -75,11 +75,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 - Email: contact@flairspace.co
 - Twitter: [@ChatMe_At](https://twitter.com/ChatMe_At)
 
-## 📊 Stats
-
-![GitHub repo size](https://img.shields.io/github/repo-size/yourusername/flairspace-landing)
-![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/flairspace-landing)
-
 ---
 
 <div align="center">
