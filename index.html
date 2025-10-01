@@ -17,7 +17,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#00b894">
+    <meta name="theme-color" content="#00b894" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#2d3436" media="(prefers-color-scheme: dark)">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -92,44 +93,75 @@ ______ _       _
                 <span class="prompt">$</span> ls products/
             </div>
             <div class="output">
-                <ul class="products">
-                    <li class="product">
-                        <a href="https://chatme.at" class="product-link">
-                            <span class="dir">📁</span> chatme.at
-                        </a>
-                        <div class="product-details">
-                            <p class="product-desc">Real AI Conversations for India</p>
-                            <div class="product-features">
-                                <h4>Key Features:</h4>
-                                <ul>
-                                    <li>• Multilingual AI conversations in Indian languages</li>
-                                    <li>• Multiple AI personalities to chat with</li>
-                                    <li>• 24/7 available AI companions</li>
-                                    <li>• Safe and private conversations</li>
-                                </ul>
-                                <p>Experience the future of AI communication tailored for the Indian audience.</p>
-                                <a href="https://chatme.at" class="cta-button">Visit Chatme.at →</a>
-                                <div class="social-links">
-                                    <p>Connect with us:</p>
-                                    <div class="social-icons">
-                                        <a href="https://www.instagram.com/chatme.at" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                        <a href="https://x.com/ChatMe_At" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                        <a href="https://www.producthunt.com/products/chatme-at" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Product Hunt">
-                                            <i class="fab fa-product-hunt"></i>
-                                        </a>
-                                        <a href="https://discord.gg/JUk3ACdSk4" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Discord">
-                                            <i class="fab fa-discord"></i>
-                                        </a>
+                <div class="products">
+                    <details class="accordion product-accordion">
+                        <summary class="accordion-header product-header">
+                            <span class="product-title">
+                                <span class="dir">📁</span> Zuperchit - Modern Chit Fund Management Software <span class="coming-soon">(Coming Soon)</span>
+                            </span>
+                            <span class="accordion-icon">+</span>
+                        </summary>
+                        <div class="accordion-content">
+                            <div class="product-details">
+                                <div class="product-features">
+                                    <h4>Key Features:</h4>
+                                    <ul>
+                                        <li>• End-to-end chit fund management solution</li>
+                                        <li>• Automated bid processing and winner selection</li>
+                                        <li>• Real-time reporting and analytics dashboard</li>
+                                        <li>• Secure member portal with digital documentation</li>
+                                        <li>• Multi-branch and multi-scheme support</li>
+                                        <li>• SMS and email notifications for all transactions</li>
+                                        <li>• Mobile-friendly interface for on-the-go access</li>
+                                    </ul>
+                                    <p>Streamline your chit fund operations with our upcoming cloud-based solution designed for both small and large chit fund companies.</p>
+                                    <div class="coming-soon-badge">Coming Soon</div>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="accordion product-accordion">
+                        <summary class="accordion-header product-header">
+                            <span class="product-title">
+                                <span class="dir">📁</span> chatme.at - Real AI Conversations for India
+                            </span>
+                            <span class="accordion-icon">+</span>
+                        </summary>
+                        <div class="accordion-content">
+                            <div class="product-details">
+                                <div class="product-features">
+                                    <h4>Key Features:</h4>
+                                    <ul>
+                                        <li>• Multilingual AI conversations in Indian languages</li>
+                                        <li>• Multiple AI personalities to chat with</li>
+                                        <li>• 24/7 available AI companions</li>
+                                        <li>• Safe and private conversations</li>
+                                    </ul>
+                                    <p>Experience the future of AI communication tailored for the Indian audience.</p>
+                                    <a href="https://chatme.at" class="cta-button">Visit Chatme.at →</a>
+                                    <div class="social-links">
+                                        <p>Connect with us:</p>
+                                        <div class="social-icons">
+                                            <a href="https://www.instagram.com/chatme.at" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                            <a href="https://x.com/ChatMe_At" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                            <a href="https://www.producthunt.com/products/chatme-at" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Product Hunt">
+                                                <i class="fab fa-product-hunt"></i>
+                                            </a>
+                                            <a href="https://discord.gg/JUk3ACdSk4" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Discord">
+                                                <i class="fab fa-discord"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </li>
-                </ul>
+                    </details>
+                </div>
             </div>
 
             <div class="line">
@@ -161,7 +193,7 @@ Email: contact@flairspace.co
                 </pre>
             </div>
             <div class="line">
-                <span class="prompt">$</span> <span>echo "This terminal theme is open source on GitHub: <a href="https://github.com/iamvasee/flairspace.co-landing" class="link" target="_blank"">flairspace.co-landing</a>"</span>
+                <span class="prompt">$</span> <span>echo "This terminal theme is open source on GitHub: <a href="https://github.com/iamvasee/flairspace.co-landing" class="link" target="_blank" rel="noopener"">flairspace.co-landing</a>"</span>
             </div>
 
             <div class="line">
