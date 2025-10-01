@@ -1,5 +1,24 @@
+// Terminal Loader Animation
+function initLoader() {
+    const loader = document.getElementById('terminal-loader');
+    const terminal = document.querySelector('.terminal');
+    
+    // Show terminal after loader completes
+    setTimeout(() => {
+        loader.classList.add('loader-hidden');
+        terminal.classList.add('visible');
+        
+        // Remove loader from DOM after animation completes
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 500);
+    }, 3000); // Total animation duration
+}
+
 // Theme Toggle Functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize loader
+    initLoader();
     const themeToggle = document.getElementById('theme-toggle');
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     
