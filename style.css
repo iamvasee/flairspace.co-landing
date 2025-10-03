@@ -16,16 +16,19 @@
 
 body {
     font-family: 'IBM Plex Mono', monospace;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: var(--text-color);
     line-height: 1.6;
     padding: 20px;
     min-height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0;
-    background-attachment: fixed;
-    background-size: cover;
 }
 
 /* Terminal Styles */
@@ -41,15 +44,15 @@ body {
     width: 100%;
     max-width: 900px;
     background: var(--bg-color);
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 15px 35px var(--shadow-color);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    border-top: 1px solid var(--border-color);
-    border-left: 1px solid var(--border-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .terminal:hover {
@@ -64,36 +67,36 @@ body {
     --text-color: #2d3436;
     --accent-color: #00b894;
     --prompt-color: #e17055;
-    --border-color: rgba(0, 0, 0, 0.08);
-    --shadow-color: rgba(0, 0, 0, 0.1);
-    --header-bg: linear-gradient(to right, #f8f9fa, #e9ecef);
-    --header-border: rgba(0, 0, 0, 0.05);
-    --content-bg: rgba(255, 255, 255, 0.7);
-    --footer-bg: #f5f5f5;
-    --product-bg: #f9f9f9;
-    --product-hover: #f0f0f0;
-    --accordion-bg: #f8f9fa;
-    --accordion-header: #f1f3f5;
-    --accordion-hover: #e9ecef;
+    --border-color: rgba(0, 0, 0, 0.15);
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --header-bg: rgba(255, 255, 255, 0.8);
+    --header-border: rgba(0, 0, 0, 0.1);
+    --content-bg: rgba(255, 255, 255, 0.9);
+    --footer-bg: rgba(245, 245, 245, 0.9);
+    --product-bg: rgba(255, 255, 255, 0.9);
+    --product-hover: rgba(0, 0, 0, 0.05);
+    --accordion-bg: rgba(248, 249, 250, 0.9);
+    --accordion-header: rgba(241, 243, 245, 0.9);
+    --accordion-hover: rgba(233, 236, 239, 0.9);
 }
 
 /* Dark Theme */
 [data-theme="dark"] {
-    --bg-color: #1e1e2e;
+    --bg-color: rgba(30, 30, 46, 0.95);
     --text-color: #ffffff;
     --accent-color: #9c27b0; /* Purple accent color */
     --prompt-color: #e67e22;
-    --border-color: rgba(255, 255, 255, 0.1);
-    --shadow-color: rgba(0, 0, 0, 0.3);
-    --header-bg: linear-gradient(to right, #2d3436, #1e272e);
-    --header-border: rgba(255, 255, 255, 0.05);
-    --content-bg: rgba(30, 30, 46, 0.95);
-    --footer-bg: #1a1a2e;
-    --product-bg: #2d3436;
-    --product-hover: #3d4548;
-    --accordion-bg: #2d3436;
-    --accordion-header: #3d4548;
-    --accordion-hover: #4d5659;
+    --border-color: rgba(255, 255, 255, 0.15);
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --header-bg: rgba(30, 30, 46, 0.9);
+    --header-border: rgba(255, 255, 255, 0.1);
+    --content-bg: rgba(30, 30, 46, 0.9);
+    --footer-bg: rgba(26, 26, 46, 0.9);
+    --product-bg: rgba(45, 52, 54, 0.9);
+    --product-hover: rgba(255, 255, 255, 0.1);
+    --accordion-bg: rgba(45, 52, 54, 0.9);
+    --accordion-header: rgba(61, 69, 72, 0.9);
+    --accordion-hover: rgba(77, 86, 89, 0.9);
     color-scheme: dark;
 }
 
@@ -461,6 +464,92 @@ body {
 .social-icon:nth-child(3):hover { color: #DA552F; } /* Product Hunt */
 .social-icon:nth-child(4):hover { color: #5865F2; } /* Discord */
 
+/* CTA Buttons */
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.95em;
+}
+
+.cta-button i {
+    font-size: 1.1em;
+}
+
+/* Buttons */
+.cta-button {
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #000000;
+}
+
+.cta-button:hover {
+    background: #333333;
+    border-color: #333333;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* For dark mode */
+[data-theme="dark"] .cta-button {
+    background: #000000;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+[data-theme="dark"] .cta-button:hover {
+    background: #333333;
+    border-color: #ffffff;
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.social-links p {
+    margin-bottom: 10px;
+    color: var(--text-muted, #666);
+    font-size: 0.9em;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    color: var(--text-color);
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.social-icon:hover {
+    color: #000000;
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+[data-theme="dark"] .social-icon:hover {
+    color: #ffffff;
+}
+
 /* Coming Soon Styles */
 .coming-soon {
     color: #e67e22;
@@ -632,6 +721,7 @@ body {
     margin: 0;
     padding: 10px 15px;
     font-size: 0.95em;
+    line-height: 1.6;
     color: #555;
     line-height: 1.6;
     background-color: rgba(0, 0, 0, 0.03);
